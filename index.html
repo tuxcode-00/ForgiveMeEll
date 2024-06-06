@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Forgive Me Ell</title>
+  </head>
+
+  <body>
+    <div class="card bg-love">
+      <div class="img-container">
+        <img
+          id="thumb"
+          src="https://media.tenor.com/NC9S9-pqbzkAAAAi/lucu-cute-cat.gif"
+          alt="thumb"
+          class="img-thumb"
+        />
+      </div>
+      <h2 class="text-center">
+        Teruntuk Elly yang baik hati dan lemah lembut ini, maafkanlah temanmu
+        yang membuatmu badmood + ngambek semalem yaa, pleaseee
+      </h2>
+      <h4 class="text-center">Mau memaafkanku kan kakk?</h4>
+      <div class="card-footer">
+        <div class="btn mau" onclick="mau()">Mau 🤗</div>
+        <div class="btn gak" onclick="gakmau(this)" onmouseover="gakmau(this)">
+          Gak ☹️
+        </div>
+      </div>
+      <div class="info text-center mt-16" id="info"></div>
+      <div class="water-mark text-center">
+        <a
+          class="mt-16"
+          href="https://api.whatsapp.com/send/?phone=6281234961784&text&type=phone_number&app_absent=0"
+          target="_blank"
+          >Kalau udah mau klik sini kak</a
+        >
+      </div>
+    </div>
+    <div class="text-center mt-16" id="musicbox">
+      <audio
+        id="music"
+        src="assets_audio_OST -In A Beautiful Way.mp3"
+        controls
+      ></audio>
+    </div>
+  </body>
+  <script>
+    let _info = document.getElementById('info');
+    let _music = document.getElementById('music');
+
+    function gakmau(element) {
+      element.style.position = 'absolute';
+      element.style.left = `${Math.floor(Math.random() * 90)}%`;
+      element.style.top = `${Math.floor(Math.random() * 90)}%`;
+      _info.innerHTML = 'Emm, disaranin mencet mau sih kak 🙄';
+    }
+
+    function mau() {
+      if (_music.paused) _music.play();
+      _info.innerHTML =
+        'Thanks kakk, tak kasih intro<br> your fav song wes<br> karena sudah memaafkanku ☺🙌';
+    }
+  </script>
+</html>
